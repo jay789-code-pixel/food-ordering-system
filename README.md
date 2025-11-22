@@ -65,10 +65,10 @@ cheese popcorn                 : ₹150.00
 ...
 ------------------------------------------
 
-Enter your order (q to quit): samosa
-Enter your order (q to quit): coffee
-Enter your order (q to quit): ice cream
-Enter your order (q to quit): q
+Enter your order (f to finish): samosa
+Enter your order (f to finish): coffee
+Enter your order (f to finish): ice cream
+Enter your order (f to finish): f
 
 ----------------YOUR ORDER----------------
 samosa               : 80
