@@ -1,4 +1,3 @@
-# Menu dictionary - prices in rupees
 menu = {
     "samosa": 80,
     "salted popcorn": 100,
@@ -24,32 +23,14 @@ menu = {
 
 
 def display_menu(menu_dict):
-    """
-    Displays the restaurant menu in a formatted table.
-    
-    Parameters:
-        menu_dict (dict): Dictionary containing menu items and their prices
-    
-    Returns:
-        None
-    """
     print("-------------------MENU-------------------")
     for item, price in menu_dict.items():
-        # Format: item name (30 chars wide) : price with 2 decimal places
         print(f"{item:30} : ₹{price:.2f}")
     print("------------------------------------------\n")
 
 
 def get_user_orders(menu_dict):
-    """
-    Takes orders from the user until they finish or quit.
-    
-    Parameters:
-        menu_dict (dict): Dictionary containing available menu items
-    
-    Returns:
-        list: List of ordered items, or empty list if user quits without ordering
-    """
+
     cart = []
     
     while True:
@@ -78,16 +59,6 @@ def get_user_orders(menu_dict):
 
 
 def calculate_total(cart, menu_dict):
-    """
-    Calculates the total price of all items in the cart.
-    
-    Parameters:
-        cart (list): List of ordered items
-        menu_dict (dict): Dictionary containing menu items and prices
-    
-    Returns:
-        float: Total price of all items in cart
-    """
     total = 0
     for item in cart:
         total += menu_dict[item]
@@ -95,16 +66,7 @@ def calculate_total(cart, menu_dict):
 
 
 def display_order_summary(cart, menu_dict):
-    """
-    Displays a summary of the order with itemized prices and total.
-    
-    Parameters:
-        cart (list): List of ordered items
-        menu_dict (dict): Dictionary containing menu items and prices
-    
-    Returns:
-        None
-    """
+
     if not cart:  # If cart is empty, don't display anything
         return
     
@@ -120,13 +82,7 @@ def display_order_summary(cart, menu_dict):
 
 
 def main():
-    """
-    Main function that orchestrates the restaurant ordering system.
-    Displays menu, takes orders, and shows the final bill.
-    
-    Returns:
-        None
-    """
+
     # Display the menu to the customer
     display_menu(menu)
     
@@ -139,4 +95,5 @@ def main():
 
 # Run the program
 if __name__ == "__main__":
+
     main()
